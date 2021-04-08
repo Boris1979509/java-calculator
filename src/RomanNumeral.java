@@ -12,19 +12,16 @@ public enum RomanNumeral {
 
     private int value;
 
-    RomanNumeral(int value) {
-        this.value = value;
-    }
+    RomanNumeral(int value) { this.value = value; }
 
-    public int getValue() {
-        return value;
-    }
+    public int getValue() { return value; }
 
     /**
      * List numbers reversed
      * @return List
      */
-    public static List<RomanNumeral> getReverseSortedValues() {
+    public static List<RomanNumeral> getReverseSortedValues()
+    {
         return Arrays.stream(values())
                 .sorted(Comparator.comparing((RomanNumeral e) -> e.value).reversed())
                 .collect(Collectors.toList());
@@ -35,7 +32,8 @@ public enum RomanNumeral {
      * @param input String
      * @return int
      */
-    public static int romanToArabic(String input) {
+    public static int romanToArabic(String input)
+    {
         String romanNumeral = input.toUpperCase();
         int result = 0;
 
@@ -65,7 +63,8 @@ public enum RomanNumeral {
      * @param number int
      * @return String
      */
-    public static String arabicToRoman(int number) {
+    public static String arabicToRoman(int number)
+    {
         if ((number <= 0) || (number > 4000)) {
             throw new IllegalArgumentException(number + " is not in range (0,4000]");
         }

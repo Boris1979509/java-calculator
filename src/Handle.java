@@ -10,7 +10,8 @@ class Handle {
      * @param input String
      * @return String
      */
-    static String request(String input) throws LimitNumbersException {
+    static String request(String input) throws LimitNumbersException
+    {
 
         boolean flag = false;
         List data = SplitString.split(input);
@@ -43,7 +44,8 @@ class Handle {
      * @param flag boolean
      * @return String
      */
-    private static String switcher(int firstNumber, int secondNumber, boolean flag){
+    private static String switcher(int firstNumber, int secondNumber, boolean flag)
+    {
         int total = 0;
         switch (Operator.getValue()) {
             case '+' :

@@ -8,7 +8,8 @@ import java.io.InputStreamReader;
      */
     public class Main {
 
-        public static void main(String[] args) throws Exception {
+        public static void main(String[] args) throws Exception
+        {
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Enter the data string in the format: <1 + 3> or <I + III>");
