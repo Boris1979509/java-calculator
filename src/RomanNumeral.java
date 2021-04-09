@@ -65,8 +65,15 @@ public enum RomanNumeral {
      */
     public static String arabicToRoman(int number)
     {
-        if ((number <= 0) || (number > 4000)) {
-            throw new IllegalArgumentException(number + " is not in range (0,4000]");
+        boolean minus = false;
+
+        if(number < 0) {
+            number =-number;
+            minus = true;
+        }
+
+        if (number == 0) {
+            return "nil";
         }
 
         List<RomanNumeral> romanNumerals = RomanNumeral.getReverseSortedValues();
@@ -84,6 +91,6 @@ public enum RomanNumeral {
             }
         }
 
-        return sb.toString();
+        return minus ? "-" + sb.toString() : sb.toString();
     }
 }
